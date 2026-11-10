@@ -848,7 +848,7 @@ if(typeof document!=="undefined"){
 
     /* ===== 西洋占星術 ===== */
     const sunEl=SIGN_EL[r.sunI], moonEl=SIGN_EL[r.moonI];
-    const P={core:EL_PHRASE[sunEl], sub:EL_PHRASE[moonEl]};
+    const P={core:EL_PHRASE[sunEl].core, sub:EL_PHRASE[moonEl]};
     $("r-west").innerHTML=
       '<div class="flex2">'
       +'<div class="emblem-box">'+emblemSVG(r.sunI)+'<div class="emblem-cap">太陽星座の紋章モチーフ（サンプル）</div></div>'
