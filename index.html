@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>占いシステム制作サンプル集｜受注制作デモ（第5版）</title>
+<title>占いシステム制作サンプル集｜受注制作デモ</title>
 <style>
 :root{
 --bg:#14101f; --panel:#1e1838; --panel2:#1a1430; --panel3:#221a42;
@@ -268,7 +268,7 @@ box-shadow:0 8px 22px rgba(0,0,0,.55)}
 <p class="lead">生年月日などを入力すると結果を自動表示する「計算型」占いシステムの、受注制作サンプルページです。このページでは、西洋占星術・四柱推命・タロットの3つを、実際の納品に近い形まで作り込んでお見せします。</p>
 </header>
 
-<p class="sample-note">これは受注制作のサンプルです。各占いは実際に動作しますので、ご自身の生年月日でお試しください。本番制作では、文章・色・モチーフ（紋章やカードの絵柄など）は、依頼者の世界観に合わせて作り込めます。このサンプルは「紺＋金」の落ち着いたトーンですが、和風・可愛い系・ダーク系など、別トーンでの制作も可能です。</p>
+<p class="sample-note">これは受注制作のサンプルです。各占いは実際に動作しますので、ご自身の生年月日でお試しください。本番制作では、文章・色・モチーフ(属性)画像（紋章やカードなど）は、依頼者の世界観に合わせて作り込めます。このサンプルは「紺＋金」の落ち着いたトーンですが、和風・可愛い系・ダーク系など、別トーンでの制作も可能です。</p>
 
 <!-- ================= 共通入力 ================= -->
 <div class="form-card">
@@ -295,23 +295,23 @@ box-shadow:0 8px 22px rgba(0,0,0,.55)}
 
 <!-- ================= 1. 西洋占星術 ================= -->
 <section class="fortune" id="mod-west">
-<h2 class="mincho">西洋占星術 <span class="badge a">A 標準</span></h2>
-<p class="intro">太陽・月・アセンダントの3点から読み解く、最もご依頼の多い構成です。ホロスコープ風チャートと星座の紋章モチーフ付きで表示します。</p>
+<h2 class="mincho">西洋占星術 <span class="badge a">基準プラン</span></h2>
+<p class="intro">太陽・月・アセンダントの3点から読み解く、最もご依頼の多い構成です。ホロスコープ風チャートと星座の紋章（モチーフ(属性)画像）付きで表示します。</p>
 <div class="result" id="r-west"><span class="placeholder">「まとめて占う」を押すと結果が表示されます。</span></div>
-<p class="memo">必要な入力：生年月日・出生時間・出生地 ／ 文章は星座ごとに用意したものを自動で出し分けます。本格的な全天体・アスペクト表示はC区分（要相談）。</p>
+<p class="memo">必要な入力：生年月日・出生時間・出生地 ／ 文章は星座ごとに用意したものを自動で出し分けます。本格的な全天体・アスペクト表示は要相談。</p>
 </section>
 
 <!-- ================= 2. 四柱推命 ================= -->
 <section class="fortune" id="mod-shichu">
-<h2 class="mincho">四柱推命 <span class="badge a">A 標準</span></h2>
+<h2 class="mincho">四柱推命 <span class="badge a">基準プラン</span></h2>
 <p class="intro">命式表・通変星・日主の読み解きまで含めた構成です。鑑定の現場でそのまま見せられる表形式で表示します。</p>
 <div class="result" id="r-shichu"><span class="placeholder">「まとめて占う」を押すと結果が表示されます。</span></div>
-<p class="memo">必要な入力：生年月日・出生時間 ／ 節入りは近似日で判定。通変星は日干と各柱の天干の関係から自動計算します。大運・流年などの本格版はC区分（要相談）。</p>
+<p class="memo">必要な入力：生年月日・出生時間 ／ 節入りは近似日で判定。通変星は日干と各柱の天干の関係から自動計算します。大運・流年などの本格版は要相談。</p>
 </section>
 
 <!-- ================= 3. タロット ================= -->
 <section class="fortune" id="mod-tarot">
-<h2 class="mincho">タロット（3枚引き） <span class="badge b">B オプション</span></h2>
+<h2 class="mincho">タロット（3枚引き） <span class="badge a">基準プラン</span></h2>
 <p class="intro">裏向きのカードから直感で3枚選び、めくって開く対話形式です。「状況・課題・アドバイス」の3枚引きで、カードは重複なく引かれ、正位置／逆位置で文章が変わります。</p>
 <p class="tarot-guide">心を落ち着けて、3枚選んでください</p>
 <div class="tdeck">
@@ -333,7 +333,7 @@ box-shadow:0 8px 22px rgba(0,0,0,.55)}
 </div>
 <p class="tarot-btns"><button class="btn sub-btn" id="tarotOpenBtn" type="button" disabled>カードを開く</button>
 <button class="btn sub-btn" id="tarotResetBtn" type="button">もう一度引く</button></p>
-<p class="memo">必要な入力：なし ／ 大アルカナ22枚・正位置／逆位置。カードの絵柄は、本番では依頼者のテーマに合わせたモチーフで作り込めます。スプレッドの種類（ケルト十字など）は相談で拡張可能。</p>
+<p class="memo">必要な入力：なし ／ 大アルカナ22枚・正位置／逆位置。カードのモチーフ(属性)画像は、本番では依頼者のテーマに合わせて作り込めます。スプレッドの種類（ケルト十字など）はご相談ください。</p>
 </section>
 
 <!-- ================= 対応範囲 ================= -->
@@ -342,26 +342,29 @@ box-shadow:0 8px 22px rgba(0,0,0,.55)}
 <p class="lead2">このサンプルに載せているのは西洋占星術・四柱推命・タロットの3つですが、対応メニュー全体は下記の範囲です。作り込みの深さの目安としてご覧ください。</p>
 <div class="scope-grid">
 <div class="scope-box">
-<h4><span class="badge a">A 標準</span></h4>
+<h4><span class="badge a">基準プランで選べる占術</span></h4>
 <ul>
+<li>西洋占星術（太陽・月・ASC）</li>
+<li>インド占星術（ASC・月の宿）</li>
+<li>四柱推命（四柱・通変星・五行の出現数）</li>
+<li>数秘術（ライフパス）</li>
+<li>九星気学（本命星）</li>
+<li>タロット（3枚引き）</li>
+<li>おみくじ・今日の運勢</li>
+<li>干支×星座</li>
+</ul>
+</div>
+<div class="scope-box">
+<h4><span class="badge b">追加・複合（見積もり相談）</span></h4>
+<ul>
+<li>2つ目以降の占術の追加</li>
 <li>複合パターン分類（24パターン等）</li>
-<li>西洋占星術ライト（太陽・月・ASC）</li>
-<li>インド占星術ライト（ASC・月の宿）</li>
-<li>四柱推命ベーシック（四柱・通変星・五行）</li>
-<li>数秘術／おみくじ・今日の運勢</li>
-</ul>
-</div>
-<div class="scope-box">
-<h4><span class="badge b">B 追加開発（オプション）</span></h4>
-<ul>
-<li>タロット（3枚引き等のスプレッド）</li>
-<li>九星気学（本命星・吉方位）</li>
 <li>相性診断（2人入力）</li>
-<li>年運・月運の拡張／干支×星座の簡易複合</li>
+<li>年運・月運の拡張</li>
 </ul>
 </div>
 <div class="scope-box">
-<h4>C 要相談</h4>
+<h4>要相談</h4>
 <ul>
 <li>四柱推命の本格版（大運・流年・空亡）</li>
 <li>姓名判断（採用流派の固定が前提）</li>
@@ -370,7 +373,7 @@ box-shadow:0 8px 22px rgba(0,0,0,.55)}
 </ul>
 </div>
 <div class="scope-box">
-<h4>D 対応不可</h4>
+<h4>対応不可</h4>
 <ul>
 <li>紫微斗数・算命学</li>
 <li>霊視・チャネリングなど直感に依存するもの</li>
@@ -382,7 +385,7 @@ box-shadow:0 8px 22px rgba(0,0,0,.55)}
 </section>
 
 <div class="notes">
-計算は近似式を用いているため、星座や節入りなどの境界付近では、専門の天体暦ソフトと結果が異なる場合があります。入力した生年月日などの情報は、お使いのブラウザの中だけで処理され、サーバーへ送信されることはありません。このページの文章はサンプル用です。本番では依頼者の鑑定スタイルに合わせた文章に入れ替えられます。
+計算は近似式を用いているため、星座や節入りなどの境界付近では、専門の天体暦ソフトと結果が異なる場合があります。入力した生年月日などの情報は、お使いのブラウザの中だけで処理され、サーバーへ送信されることはありません。このページの文章はサンプル用です。本番では、ご相談のうえで依頼者の鑑定スタイルに合わせた文章への差し替えも可能です。
 </div>
 
 
@@ -861,7 +864,7 @@ if(typeof document!=="undefined"){
     }
     $("r-west").innerHTML=
       '<div class="flex2">'
-      +'<div class="emblem-box">'+emblemSVG(r.sunI)+'<div class="emblem-cap">太陽星座の紋章モチーフ</div></div>'
+      +'<div class="emblem-box">'+emblemSVG(r.sunI)+'<div class="emblem-cap">太陽星座の紋章（モチーフ(属性)画像）</div></div>'
       +'<div class="chart-box">'+chartSVG(r.sunL, r.moonL, timeKnown?ascL:r.sunL, timeKnown)+'<div class="emblem-cap">'+(timeKnown?'ホロスコープ風チャート：ASCを左端に置き、太陽と月の位置を示しています':'ホロスコープ風チャート：出生時間不明のためASCは表示せず、太陽と月の位置を示しています')+'</div></div>'
       +'</div>'
       +'<div class="grow" style="width:100%">'
