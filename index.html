@@ -882,10 +882,10 @@ if(typeof document!=="undefined"){
       + timeNote
       +'<h4 class="mincho">総合リーディング（太陽×月のエレメントから）</h4>'
       +'<div class="comp-grid">'
-      +'<div class="comp-item"><div class="t">基本性格</div><p>'+P.core+'があなたの軸。内面には'+P.sub.core+'も流れていて、外の顔と素の自分の両方を知ることがバランスの鍵になります。</p></div>'
-      +'<div class="comp-item"><div class="t">恋愛</div><p>'+EL_PHRASE[moonEl].love+'。太陽の'+EL_PHRASE[sunEl].love.split("。")[0]+'という面も顔を出します。</p></div>'
-      +'<div class="comp-item"><div class="t">仕事</div><p>'+EL_PHRASE[sunEl].work+'。月が示す「'+EL_PHRASE[moonEl].work.split("。")[0]+'」という働き方が合う環境だと、無理なく成果が続きます。</p></div>'
-      +'<div class="comp-item"><div class="t">金運</div><p>'+EL_PHRASE[sunEl].money+'。'+EL_PHRASE[moonEl].money+'</p></div>'
+      +'<div class="comp-item"><div class="t">基本性格</div><p>'+(sunEl===moonEl ? P.core+'があなたの軸。太陽と月が同じ気質を示していて、外の顔と素の自分が一致しやすいタイプです。' : P.core+'があなたの軸。内面には'+P.sub.core+'も流れていて、外の顔と素の自分の両方を知ることがバランスの鍵になります。')+'</p></div>'
+      +'<div class="comp-item"><div class="t">恋愛</div><p>'+(sunEl===moonEl ? EL_PHRASE[moonEl].love+'。太陽も同じ気質を示すため、この傾向がはっきり出ます。' : EL_PHRASE[moonEl].love+'。太陽の'+EL_PHRASE[sunEl].love.split("。")[0]+'という面も顔を出します。')+'</p></div>'
+      +'<div class="comp-item"><div class="t">仕事</div><p>'+(sunEl===moonEl ? EL_PHRASE[sunEl].work+'。月も同じ気質を示すため、この働き方が自然に続きます。' : EL_PHRASE[sunEl].work+'。月が示す「'+EL_PHRASE[moonEl].work.split("。")[0]+'」という働き方が合う環境だと、無理なく成果が続きます。')+'</p></div>'
+      +'<div class="comp-item"><div class="t">金運</div><p>'+(sunEl===moonEl ? EL_PHRASE[sunEl].money : EL_PHRASE[sunEl].money+'。'+EL_PHRASE[moonEl].money)+'</p></div>'
       +'</div></div>';
 
     /* ===== 四柱推命 ===== */
